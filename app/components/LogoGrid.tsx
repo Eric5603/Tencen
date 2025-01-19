@@ -9,7 +9,7 @@ export default function LogoGrid() {
                         Trusted by leading brands
                     </h3>
                     <p className="text-gray-600 mt-3">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dignissim nibh nisl, vel egestas magna rhoncus at. Nunc elementum efficitur tortor in laoreet.
+                    We are proud to partner with some of the most innovative companies in the world. At Tencen, we help businesses across industries scale with AI-powered SaaS solutions, creating smarter operations, better customer experiences, and sustainable growth.
                     </p>
                 </div>
                 <div className="mt-12 flex justify-center">

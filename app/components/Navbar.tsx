@@ -16,7 +16,7 @@ const Navbar: React.FC = () => {
         { title: "About Us", path: "/about-us" },
         { title: "Services", path: "/services" },
         { title: "Portfolio", path: "/portfolio" },
-        { title: "Contact Us", path: "/contact" }
+       
     ];
 
     useEffect(() => {
@@ -116,7 +116,7 @@ const Navbar: React.FC = () => {
                             href="/sign-up"
                             className="flex items-center justify-center gap-x-1 py-2 px-4 text-white font-medium bg-gray-800 hover:bg-gray-700 active:bg-gray-900 rounded-lg md:inline-flex"
                         >
-                            Lets work 
+                            Contact Us
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 viewBox="0 0 20 20"
