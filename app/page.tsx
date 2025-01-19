@@ -1,3 +1,4 @@
+import Stats from "./components/Stats";
 import CTA from "./components/CTA";
 import Features from "./components/Feature";
 import Footer from "./components/Footer";
@@ -13,6 +14,7 @@ export default function Home() {
     <Hero/>
     <LogoGrid/>
     <Features/>
+    <Stats/>
     <CTA/>
     <Footer/>
    </>
