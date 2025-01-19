@@ -8,7 +8,7 @@ export default function Footer() {
     <div className="flex flex-wrap justify-between items-center gap-2">
       <div>
         <p className="text-sm text-gray-600 dark:text-neutral-400">
-          © 2025 Articulate constructions Limited.
+          © 2025 Tencen.
         </p>
       </div>
       
