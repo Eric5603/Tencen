@@ -26,7 +26,7 @@ const StatsSection = () => {
               Our customers are always happy
             </h3>
             <p className="mt-3">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi venenatis sollicitudin quam ut tincidunt.
+            Encourages action and engagement with your AI agency after showing proof of success.
             </p>
           </div>
           <div className="mt-12">
