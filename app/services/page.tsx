@@ -1,12 +1,13 @@
 
-import Content from "../components/Content";
 import CTA from "../components/CTA";
-import Banner from "../components/Banner";  
+import FAQ from "../components/FAQ";
+import Showcase from "../components/ShowCase";
+
 const Services = () => {
     return (
       <>
-         <Banner/>
-         <Content/>
+        <Showcase/>
+        <FAQ/>
          <CTA/>
       
       </>

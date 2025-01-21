@@ -1,12 +1,14 @@
+
+import Banner from "../components/Banner";
 import Content from "../components/Content";
 import CTA from "../components/CTA";
-import Testimonials from "../components/Testimonials";
+
 
 const Company = () => {
     return (
         <div>
+            <Banner/>
             <Content/>
-            <Testimonials/>
             <CTA/>
         </div>
     );
