@@ -1,12 +1,12 @@
 import React from 'react';
 import Image from 'next/image';
 
-interface Testimonial {
+type Testimonial = {
   avatar: string;
   name: string;
   title: string;
   quote: string;
-}
+};
 
 const Testimonials: React.FC = () => {
   const testimonials: Testimonial[] = [
@@ -18,17 +18,17 @@ const Testimonials: React.FC = () => {
     },
     {
       avatar: "/images/Reviews/Simon-Adrew.jpg",
-      name: "Simon Andrew", 
+      name: "Simon Andrew",
       title: "Senior Software Engineer",
       quote: "The development process tools and frameworks provided are cutting-edge and dramatically improve our teams productivity."
     },
     {
       avatar: "/images/Reviews/Rene-Wells.jpg",
       name: "Michael Worin",
-      title: "Product Design Lead", 
+      title: "Product Design Lead",
       quote: "Innovative design solutions that seamlessly blend user experience with advanced technological capabilities."
-    },
-  ]
+    }
+  ];
 
   return (
     <section className="relative py-14">
@@ -97,7 +97,7 @@ const Testimonials: React.FC = () => {
         }}
       ></div>
     </section>
-  )
-}
+  );
+};
 
 export default Testimonials;
