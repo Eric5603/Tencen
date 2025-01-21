@@ -20,7 +20,7 @@ const Testimonials: React.FC = () => {
       avatar: "/images/Reviews/Simon-Adrew.jpg",
       name: "Simon Andrew", 
       title: "Senior Software Engineer",
-      quote: "The development process tools and frameworks provided are cutting-edge and dramatically improve our team's productivity."
+      quote: "The development process tools and frameworks provided are cutting-edge and dramatically improve our teams productivity."
     },
     {
       avatar: "/images/Reviews/Rene-Wells.jpg",

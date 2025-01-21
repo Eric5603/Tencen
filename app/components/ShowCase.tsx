@@ -1,5 +1,5 @@
 import React, { useMemo } from 'react';
-
+import Image from 'next/image';
 interface ShowcaseSectionProps {
   imageSrc: string;
   title: string;

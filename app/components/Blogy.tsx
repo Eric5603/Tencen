@@ -1,5 +1,5 @@
 import React from 'react';
-
+import Image from 'next/image';
 interface BlogPost {
   image: string;
   category: string;
@@ -56,7 +56,7 @@ const BlogSection: React.FC = () => {
           {blogPosts.map((post, index) => (
             <div key={index} className="p-4 md:w-1/3">
               <div className="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
-                <img 
+                <Image
                   className="lg:h-48 md:h-36 w-full object-cover object-center" 
                   src={post.image} 
                   alt={post.title} 

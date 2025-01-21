@@ -1,7 +1,6 @@
 // components/FAQSection.tsx
 "use client";
 
-import React, { useState } from 'react';
 
 interface FAQItem {
   id: string;
@@ -14,22 +13,22 @@ const FAQ: React.FC = () => {
     {
       id: 'faq1',
       question: "Lorem ipsum dolor sit amet consectetur adipisicing?",
-      answer: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab hic veritatis molestias culpa in, recusandae laboriosam neque aliquid libero nesciunt voluptate dicta quo officiis explicabo consequuntur distinctio corporis earum similique!"
+      answer: "Lorem ipsum dolor sit amet consectetur, adipisicing elit."
     },
     {
         id: 'faq1',
         question: "Lorem ipsum dolor sit amet consectetur adipisicing?",
-        answer: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab hic veritatis molestias culpa in, recusandae laboriosam neque aliquid libero nesciunt voluptate dicta quo officiis explicabo consequuntur distinctio corporis earum similique!"
+        answer: "Lorem ipsum dolor sit amet consectetur, adipisicing elit."
     },
     {
         id: 'faq1',
         question: "Lorem ipsum dolor sit amet consectetur adipisicing?",
-        answer: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab hic veritatis molestias culpa in, recusandae laboriosam neque aliquid libero nesciunt voluptate dicta quo officiis explicabo consequuntur distinctio corporis earum similique!"
+        answer: "Lorem ipsum dolor sit amet consectetur, adipisicing elit."
     },
     {
       id: 'faq2',
       question: "Lorem ipsum dolor sit amet consectetur adipisicing?",
-      answer: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab hic veritatis molestias culpa in, recusandae laboriosam neque aliquid libero nesciunt voluptate dicta quo officiis explicabo consequuntur distinctio corporis earum similique!"
+      answer: "Lorem ipsum dolor sit amet consectetur, adipisicing elit."
     }
   ];
 
@@ -76,7 +75,7 @@ const FAQ: React.FC = () => {
 
         <div className="mt-8 text-center text-gray-600">
           <p>
-            Didn't find the answer you were looking for? 
+            Did not find the answer you were looking for? 
             <a 
               href="/contact" 
               className="ml-1 text-blue-600 hover:underline"
