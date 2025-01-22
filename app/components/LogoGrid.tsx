@@ -9,7 +9,7 @@ const LogoGrid: React.FC = () => {
                         Trusted by the best developers and world-class teams
                     </p>
                     <p className="text-slate-600">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et est hendrerit, porta nunc vitae, gravida justo. Nunc fermentum.
+                    Our AI solutions are trusted by the best in the industry, helping developers and teams push the boundaries of innovation. Unlock new possibilities with our state-of-the-art AI technology.
                     </p>
                 </div>
                 <div className="flex-none mt-12 text-white lg:mt-0">

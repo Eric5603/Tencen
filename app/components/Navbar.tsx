@@ -1,4 +1,4 @@
-"use client";
+'use client';
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 
@@ -30,17 +30,17 @@ const Navbar: React.FC = () => {
 
     return (
         <nav
-            className={`bg-gray-50 pb-5 md:text-sm font-sans ${
+            className={`bg-gray-10 pb-5 md:text-sm font-sans ${
                 state
                     ? "shadow-xl rounded-xl border mx-2 mt-2 md:shadow-none md:border-none md:mx-2 md:mt-0"
                     : ""
             }`}
         >
-            <div className="gap-x-10 items-center max-w-screen-xl mx-auto px-4 md:flex md:px-8">
-                <div className="flex items-center justify-between py-4 md:block">
+            <div className="gap-x-14 items-center max-w-screen-xl mx-auto px-4 md:flex md:px-8">
+                <div className="flex items-center justify-between py-5 md:block">
                     <Link href="/" className="flex items-center space-x-2">
                         <svg
-                            className="w-12 h-12"
+                            className="w-20 h-20"
                             viewBox="0 -10.5 256 256"
                             version="1.1"
                             xmlns="http://www.w3.org/2000/svg"
@@ -52,14 +52,14 @@ const Navbar: React.FC = () => {
                                 />
                             </g>
                         </svg>
-                        <span className="mt-1 text-2xl font-semibold text-gray-800 tracking-wide md:text-3xl">
+                        <span className="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">
                             Tencen
                         </span>
                     </Link>
 
                     <div className="md:hidden">
                         <button
-                            className="menu-btn text-gray-800 hover:text-gray-600 focus:outline-none"
+                            className="menu-btn text-gray-900 hover:text-gray-600"
                             onClick={() => setState(!state)}
                         >
                             {state ? (
@@ -95,26 +95,23 @@ const Navbar: React.FC = () => {
                     </div>
                 </div>
                 <div
-                    className={`flex-1 items-center mt-6 md:mt-0 md:flex ${
+                    className={`flex-1 items-center mt-8 md:mt-0 md:flex ${
                         state ? "block" : "hidden"
                     }`}
                 >
-                    <ul className="justify-center items-center space-y-4 md:flex md:space-x-8 md:space-y-0">
+                    <ul className="justify-center items-center space-y-6 md:flex md:space-x-6 md:space-y-0">
                         {navigation.map((item, idx) => (
-                            <li
-                                key={idx}
-                                className="text-gray-800 hover:text-gray-600 font-medium tracking-wide"
-                            >
+                            <li key={idx} className="text-gray-900 font-semibold text-base  hover:text-gray-600">
                                 <Link href={item.path} className="block">
                                     {item.title}
                                 </Link>
                             </li>
                         ))}
                     </ul>
-                    <div className="flex-1 gap-x-6 items-center justify-end mt-6 space-y-4 md:flex md:space-y-0 md:mt-0">
+                    <div className="flex-1 gap-x-6 items-center justify-end mt-6 space-y-6 md:flex md:space-y-0 md:mt-0">
                         <Link
                             href="/contact"
-                            className="flex items-center justify-center gap-x-2 py-2 px-5 text-white font-medium bg-blue-600 hover:bg-blue-500 active:bg-blue-700 rounded-md md:inline-flex"
+                            className="flex items-center justify-center gap-x-1 py-2 px-4 text-white font-bold bg-blue-600 hover:bg-blue-500 active:bg-blue-700 rounded-lg md:inline-flex"
                         >
                             Contact Us
                             <svg

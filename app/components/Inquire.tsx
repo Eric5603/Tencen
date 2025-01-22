@@ -19,7 +19,7 @@ export default function Inquire() {
           />
         </svg>
       ),
-      contact: "Support@example.com",
+      contact: "ericwanyoike123@gmail.com",
     },
     {
       icon: (
@@ -38,7 +38,7 @@ export default function Inquire() {
           />
         </svg>
       ),
-      contact: "+1 (555) 000-000",
+      contact: "+254 717310481",
     },
     {
       icon: (
@@ -62,7 +62,7 @@ export default function Inquire() {
           />
         </svg>
       ),
-      contact: "Mountain View, California, United States.",
+      contact: "Dubai, Nairobi, Kenya .",
     },
   ];
 
@@ -71,7 +71,6 @@ export default function Inquire() {
       <div className="max-w-screen-xl mx-auto px-4 text-gray-600 md:px-8">
         <div className="max-w-lg mx-auto gap-12 justify-between lg:flex lg:max-w-none">
           <div className="max-w-lg space-y-3">
-            <h3 className="text-indigo-600 font-semibold">Contact</h3>
             <p className="text-gray-800 text-3xl font-semibold sm:text-4xl">
               Let us know how we can help
             </p>
