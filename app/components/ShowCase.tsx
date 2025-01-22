@@ -1,5 +1,7 @@
-import React, { useMemo } from 'react';
+"use client"
+import React, { useMemo, useState } from 'react';
 import Image from 'next/image';
+
 interface ShowcaseSectionProps {
   imageSrc: string;
   title: string;
@@ -7,19 +9,19 @@ interface ShowcaseSectionProps {
 }
 
 const CheckIcon: React.FC = () => (
-  <svg 
-    className="shrink-0 size-3.5" 
-    xmlns="http://www.w3.org/2000/svg" 
-    width="24" 
-    height="24" 
-    viewBox="0 0 24 24" 
-    fill="none" 
-    stroke="currentColor" 
-    strokeWidth="2" 
-    strokeLinecap="round" 
+  <svg
+    className="shrink-0 size-3.5"
+    xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
     strokeLinejoin="round"
   >
-    <polyline points="20 6 9 17 4 12"/>
+    <polyline points="20 6 9 17 4 12" />
   </svg>
 );
 
@@ -34,24 +36,41 @@ const FeatureListItem: React.FC<{ children: React.ReactNode }> = ({ children }) 
   </li>
 );
 
-const ShowcaseSection: React.FC<ShowcaseSectionProps> = ({ 
-  imageSrc, 
+const ShowcaseSection: React.FC<ShowcaseSectionProps> = ({
+  imageSrc,
   title,
   features
 }) => {
+  const [isLoading, setIsLoading] = useState(true);
+
+  const handleImageLoad = () => {
+    setIsLoading(false);
+  };
+
   return (
     <div className="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105 w-full max-w-xs mx-auto">
-      <Image
-        className="object-cover object-center w-full h-48" 
-        src={imageSrc} 
-        alt={title} 
-        unoptimized
-      />
+      {/* Image Section with Skeleton Loader */}
+      <div className={`relative w-full h-48 ${isLoading ? 'bg-gray-200' : ''}`}>
+        {isLoading && (
+          <div className="absolute inset-0 flex items-center justify-center bg-gray-200 animate-pulse">
+            <div className="w-16 h-16 bg-gray-300 rounded-full"></div>
+          </div>
+        )}
+        <Image
+          className={`object-cover object-center w-full h-48 transition-opacity duration-300 ${isLoading ? 'opacity-0' : 'opacity-100'}`}
+          src={imageSrc}
+          alt={title}
+          unoptimized
+          onLoadingComplete={handleImageLoad}
+        />
+      </div>
+
+      {/* Text Section */}
       <div className="p-4">
         <h2 className="title-font sm:text-xl text-lg mb-2 font-bold text-gray-900">
           {title}
         </h2>
-        
+
         <ul className="space-y-2 sm:space-y-4 mb-4">
           {features.map((feature, index) => (
             <FeatureListItem key={index}>
@@ -65,44 +84,47 @@ const ShowcaseSection: React.FC<ShowcaseSectionProps> = ({
 };
 
 const Showcase: React.FC = () => {
-  const sections: ShowcaseSectionProps[] = useMemo(() => [
-    {
-      imageSrc: "/images/Service-Image/Ai-developer.jpg", 
-      title: "AI Development",
-      features: [
-        "Custom AI model development",
-        "Machine learning solutions",
-        "Predictive analytics integration"
-      ]
-    },
-    {
-      imageSrc: "/images/Service-Image/Web&SaaS-Solutions.jpg", 
-      title: "Web & SaaS Solutions",
-      features: [
-        "Scalable web applications",
-        "Cloud-based SaaS platforms",
-        "Responsive design & UX"
-      ]
-    },
-    {
-      imageSrc: "/images/Service-Image/Advanced-Automation.jpg", 
-      title: "Automation Solutions",
-      features: [
-        "Process workflow optimization",
-        "Robotic process automation",
-        "Enterprise integration"
-      ]
-    },
-    {
-      imageSrc: "/images/Service-Image/chatbot-development.jpg", 
-      title: "Chatbot Development",
-      features: [
-        "AI-powered conversational interfaces",
-        "Multi-platform support",
-        "Natural language processing"
-      ]
-    }
-  ], []);
+  const sections: ShowcaseSectionProps[] = useMemo(
+    () => [
+      {
+        imageSrc: '/images/Service-Image/Ai-developer.jpg',
+        title: 'AI Development',
+        features: [
+          'Custom AI model development',
+          'Machine learning solutions',
+          'Predictive analytics integration',
+        ],
+      },
+      {
+        imageSrc: '/images/Service-Image/Web&SaaS-Solutions.jpg',
+        title: 'Web & SaaS Solutions',
+        features: [
+          'Scalable web applications',
+          'Cloud-based SaaS platforms',
+          'Responsive design & UX',
+        ],
+      },
+      {
+        imageSrc: '/images/Service-Image/Advanced-Automation.jpg',
+        title: 'Automation Solutions',
+        features: [
+          'Process workflow optimization',
+          'Robotic process automation',
+          'Enterprise integration',
+        ],
+      },
+      {
+        imageSrc: '/images/Service-Image/chatbot-development.jpg',
+        title: 'Chatbot Development',
+        features: [
+          'AI-powered conversational interfaces',
+          'Multi-platform support',
+          'Natural language processing',
+        ],
+      },
+    ],
+    []
+  );
 
   return (
     <section className="container mx-auto px-5 py-24">
@@ -114,12 +136,12 @@ const Showcase: React.FC = () => {
           Innovative solutions designed to transform your business through cutting-edge technology
         </p>
       </header>
-      
+
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {sections.map((section, index) => (
-          <ShowcaseSection 
-            key={index} 
-            imageSrc={section.imageSrc} 
+          <ShowcaseSection
+            key={index}
+            imageSrc={section.imageSrc}
             title={section.title}
             features={section.features}
           />
@@ -127,16 +149,14 @@ const Showcase: React.FC = () => {
       </div>
 
       <div className="mt-16 text-center">
-        <h2 className="text-2xl font-bold text-gray-800 mb-4">
-          Reach out to us!
-        </h2>
+        <h2 className="text-2xl font-bold text-gray-800 mb-4">Reach out to us!</h2>
         <p className="text-gray-600 mb-6 inline-block">
-          Have a project in mind or need more information? 
-          <a 
-            href="/contact" 
+          Have a project in mind or need more information?
+          <a
+            href="/contact"
             className="ml-2 text-indigo-600 hover:text-indigo-800 hover:underline transition duration-300"
           >
-            Contact Us 
+            Contact Us
           </a>
         </p>
       </div>
