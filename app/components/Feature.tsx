@@ -19,7 +19,9 @@ const AIIcon: FC = () => (
 
 const WebIcon: FC = () => (
   <svg width="40px" height="40px" viewBox="0 0 64 64" strokeWidth="3" stroke="blue" fill="none">
-    {/* Existing web icon SVG paths */}
+    <circle cx="32" cy="32" r="30" stroke="blue" />
+    <line x1="32" y1="2" x2="32" y2="62" stroke="blue" />
+    <line x1="2" y1="32" x2="62" y2="32" stroke="blue" />
   </svg>
 );
 
@@ -41,7 +43,8 @@ const ChatbotIcon: FC = () => (
     strokeLinecap="round"
     strokeLinejoin="round"
   >
-    {/* Existing chatbot icon SVG paths */}
+    <circle cx="12" cy="12" r="10" />
+    <path d="M16 16h.01M8 16h.01M9 9h6" />
   </svg>
 );
 
@@ -78,25 +81,25 @@ const Features: FC = () => {
       <div className="container mx-auto px-4">
         <h2 
           id="features-heading" 
-          className="text-3xl font-bold text-center text-gray-800 mb-12"
+          className="text-4xl font-extrabold text-center text-gray-800 mb-12"
         >
           Transformative Technology Solutions
         </h2>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {FEATURES.map((feature, index) => (
             <div 
               key={index} 
-              className="bg-white rounded-lg shadow-md hover:shadow-xl transition-all duration-300 p-6 text-center"
-              data-testid={`feature-${feature.title.toLowerCase().replace(/\s+/g, '-')}`}
+              className="bg-white rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300 p-8 text-center"
+              data-testid={`feature-card-${index}`}
             >
-              <div className="flex justify-center mb-4 text-blue-500">
+              <div className="flex justify-center mb-6 text-blue-500">
                 {feature.icon}
               </div>
-              <h3 className="text-xl font-semibold mb-3 text-gray-800">
+              <h3 className="text-2xl font-semibold mb-4 text-gray-900">
                 {feature.title}
               </h3>
-              <p className="text-gray-600">
+              <p className="text-base text-gray-700">
                 {feature.description}
               </p>
             </div>

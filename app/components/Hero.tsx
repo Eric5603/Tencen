@@ -20,7 +20,7 @@ export default function Hero() {
           <h1 className="text-5xl sm:text-6xl font-bold text-gray-900 tracking-wider leading-relaxed">
             Empower Your Agency with Intelligent SaaS & AI Solutions
           </h1>
-          <p className="max-w-2xl mx-auto text-normal sm:text-normal text-gray-600 leading-relaxed">
+          <p className="max-w-2xl mx-auto text-base sm:text-base text-gray-600 leading-relaxed">
             Discover cutting-edge AI-powered solutions with Tencen. Build innovative SaaS platforms and deploy intelligent agents that redefine automation & enhance customer engagement.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-4 mt-8">
@@ -51,3 +51,5 @@ export default function Hero() {
     </section>
   );
 }
+
+

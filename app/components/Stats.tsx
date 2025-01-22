@@ -1,48 +1,40 @@
 const StatsSection = () => {
-    const stats = [
-      {
-        data: "35K",
-        title: "Customers",
-      },
-      {
-        data: "10K+",
-        title: "Downloads",
-      },
-      {
-        data: "40+",
-        title: "Countries",
-      },
-      {
-        data: "30M+",
-        title: "Total revenue",
-      },
-    ];
-  
-    return (
-      <section className="py-14">
-        <div className="max-w-screen-xl mx-auto px-4 text-gray-600 md:px-8">
-          <div className="max-w-2xl mx-auto text-center">
-            <h3 className="text-gray-800 text-3xl font-semibold sm:text-4xl">
-              Our customers are always happy
-            </h3>
-            <p className="mt-3">
-            Encourages action and engagement with your AI agency after showing proof of success.
-            </p>
-          </div>
-          <div className="mt-12">
-            <ul className="flex flex-col items-center justify-center gap-y-10 sm:flex-row sm:flex-wrap lg:divide-x">
-              {stats.map((item, idx) => (
-                <li key={idx} className="text-center px-12 md:px-16">
-                  <h4 className="text-4xl text-indigo-600 font-semibold">{item.data}</h4>
-                  <p className="mt-3 font-medium">{item.title}</p>
-                </li>
-              ))}
-            </ul>
-          </div>
+  const stats = [
+    { data: "35K", title: "Customers", icon: "👥" },
+    { data: "10K+", title: "Downloads", icon: "📥" },
+    { data: "40+", title: "Countries", icon: "🌍" },
+    { data: "30M+", title: "Total revenue", icon: "💰" },
+  ];
+
+  return (
+    <section className="py-16 bg-gray-50">
+      <div className="max-w-screen-xl mx-auto px-6 text-gray-700 md:px-12">
+        {/* Header */}
+        <div className="text-center mb-12">
+          <h3 className="text-3xl font-bold text-gray-900 sm:text-4xl">
+            Our customers are always happy
+          </h3>
+          <p className="mt-4 text-lg">
+            See how our services have created impact globally, encouraging engagement and trust.
+          </p>
         </div>
-      </section>
-    );
-  };
-  
-  export default StatsSection;
-  
+
+        {/* Stats */}
+        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+          {stats.map((item, idx) => (
+            <div
+              key={idx}
+              className="flex flex-col items-center bg-white shadow-md rounded-lg p-6 hover:shadow-lg transition-shadow"
+            >
+              <span className="text-5xl">{item.icon}</span>
+              <h4 className="mt-4 text-3xl font-extrabold text-indigo-600">{item.data}</h4>
+              <p className="mt-2 text-gray-700 font-medium">{item.title}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default StatsSection;
