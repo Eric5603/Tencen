@@ -1,7 +1,5 @@
 // components/FAQSection.tsx
 "use client";
-
-
 interface FAQItem {
   id: string;
   question: string;
