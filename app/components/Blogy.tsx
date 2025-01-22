@@ -60,6 +60,7 @@ const BlogSection: React.FC = () => {
                   className="lg:h-48 md:h-36 w-full object-cover object-center" 
                   src={post.image} 
                   alt={post.title} 
+                  unoptimized
                 />
                 <div className="p-6">
                   <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">

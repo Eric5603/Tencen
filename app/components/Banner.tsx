@@ -49,10 +49,11 @@ const Banner: React.FC = () => {
           <div className="relative max-w-[600px] w-full group">
             <Image
               src="/images/Company-Image/Our-story7.jpg"
-              alt="Hubit Journey"
+              alt="Tencen Journey"
               className="w-full h-auto rounded-xl object-cover shadow-lg transition-transform group-hover:scale-[1.02]"
               width={600}
               height={400}
+              unoptimized
             />
             <div className="absolute inset-0 bg-blue-500/10 rounded-xl -z-10 group-hover:rotate-1 transition-transform"></div>
           </div>

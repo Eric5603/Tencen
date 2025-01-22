@@ -73,6 +73,7 @@ const Testimonials: React.FC = () => {
                         width={64} 
                         height={48} 
                         className="rounded-full object-cover w-16 h-16 border-2 border-indigo-500" 
+                        unoptimized
                       />
                     </div>
                     <div>
