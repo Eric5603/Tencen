@@ -38,7 +38,7 @@ const Testimonials: React.FC = () => {
             Customer Success Stories
           </div>
           <p className="mt-3 text-gray-800 text-2xl font-semibold sm:text-3xl">
-            Trusted by 23,000+ Innovative Companies
+            Trusted by 23,000 Innovative Companies
           </p>
         </div>
         <div className="mt-12">
