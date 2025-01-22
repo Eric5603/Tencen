@@ -7,8 +7,8 @@ import CTA from "../components/CTA";
 const Company = () => {
     return (
         <div>
-            <Banner/>
             <Content/>
+            <Banner/>
             <CTA/>
         </div>
     );
