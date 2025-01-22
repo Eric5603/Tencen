@@ -11,7 +11,7 @@ export default function Form() {
         </svg>
       ),
       title: "Join our community",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      desc: "Discover more and engage with us.",
       link: {
         name: "Join our Discord",
         href: "javascript:void(0)",
@@ -31,7 +31,7 @@ export default function Form() {
         </svg>
       ),
       title: "Follow us on Twitter",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      desc: "Have questions? Reach out to us directly.",
       link: {
         name: "Send us DMs",
         href: "javascript:void(0)",
