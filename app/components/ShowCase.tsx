@@ -45,6 +45,7 @@ const ShowcaseSection: React.FC<ShowcaseSectionProps> = ({
         className="object-cover object-center w-full h-48" 
         src={imageSrc} 
         alt={title} 
+        unoptimized
       />
       <div className="p-4">
         <h2 className="title-font sm:text-xl text-lg mb-2 font-bold text-gray-900">
